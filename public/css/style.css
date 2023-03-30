@@ -1,0 +1,306 @@
+/* Fix Popovers going over modals. */
+
+.popover {
+    z-index: 1030 !important;
+}
+
+/* Fix Select2 going behind modals. */
+
+.select2-container.select2-container--open .select2-dropdown {
+    z-index: 1075;
+}
+
+/* Fix color not animating on checkbox check. */
+
+.checkbox__char {
+    transition: font-size .2s ease, color .3s, background-color .3s;
+}
+
+/* Fix inconsistent colors on checkbox when using text color utility classes. */
+
+.checkbox--char>input[type=checkbox]:checked~.checkbox__char {
+    color: #fff !important;
+}
+
+/* Fix pointer cursor when checkbox is disabled or when it's a dropdown. */
+
+.checkbox--disabled .checkbox__char, .dropdown-menu {
+    cursor: default !important;
+}
+
+/* Fix long downwards letters like "g" getting cut off. */
+
+.quick-stats__info>h2, .quick-stats__info>small {
+    line-height: initial !important;
+}
+
+/* Make listview links nice and gray/black instead of primary. */
+
+.listview__content .listview__heading a {
+    color: #333;
+    transition: color .3s;
+}
+
+.listview__content a {
+    color: #8e9499;
+    transition: color .3s;
+}
+
+.listview__content .listview__heading a:hover {
+    color: #111;
+}
+
+.listview__content a:hover {
+    color: #32363a;
+}
+
+/* Implement hidable footer toolbar. */
+
+.toolbar--inner-footer {
+    border-top: 1px solid #f6f6f6 !important;
+    margin-top: 1rem !important;
+    border-radius: 0 0 2px 2px !important;
+    background-color: #FFF !important;
+    margin-bottom: 0 !important;
+    box-shadow: none !important;
+}
+
+#selected-toolbar {
+    transition: all .3s ease;
+}
+
+/* Fix notes not showing line breaks. */
+
+.popover {
+    white-space: pre-wrap;
+}
+
+/* Fix position of the floating labels with time entries. */
+
+.actions.listview__actions .issue-tracker__tag {
+    line-height: 31px;
+    margin-left: 1rem;
+}
+
+/* Fix the checkbox and radio colors. */
+
+.checkbox>input[type=checkbox]:checked~.checkbox__label:before, .checkbox>input[type=checkbox]:checked~.radio__label:before, .checkbox>input[type=radio]:checked~.checkbox__label:before, .checkbox>input[type=radio]:checked~.radio__label:before, .radio>input[type=checkbox]:checked~.checkbox__label:before, .radio>input[type=checkbox]:checked~.radio__label:before, .radio>input[type=radio]:checked~.checkbox__label:before, .radio>input[type=radio]:checked~.radio__label:before {
+    border-color: #2196F3;
+}
+
+.checkbox>input[type=checkbox]:checked~.checkbox__label:before, .checkbox>input[type=radio]:checked~.checkbox__label:before, .radio>input[type=checkbox]:checked~.checkbox__label:before, .radio>input[type=radio]:checked~.checkbox__label:before {
+    background-color: #2196F3;
+}
+
+.flatpickr-months {
+    background-color: #2196F3;
+}
+
+.flatpickr-day.selected, .flatpickr-day.selected:hover {
+    background-color: #2196F3 !important;
+}
+
+.radio__label:after {
+    background-color: #2196F3 !important;
+}
+
+/* Fix focus feedback missing. */
+
+.select2-container--focus:not(.select2-container--disabled) .selection:before, .select2-container--focus:not(.select2-container--disabled) .selection:after {
+    width: 50%;
+}
+
+.form-control.active~.form-group__bar:before, .form-control.active~.form-group__bar:after {
+    width: 50%;
+}
+
+.actions:not(.actions--inverse):focus .actions__item, .actions:not(.actions--inverse) .actions__item:focus {
+    color: #747a80 !important;
+}
+
+.top-nav>li>a:focus {
+    background-color: rgba(255, 255, 255, .2);
+}
+
+/* Add a navigation divider. */
+
+.navigation>.divider {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-top: 1px solid rgba(0, 0, 0, .04);
+}
+
+/* Alternate user styling in the navigation menu. */
+
+.user {
+    border: 1px solid rgba(0, 0, 0, .04);
+}
+
+.user, .user__info:hover {
+    background-color: transparent;
+    cursor: initial;
+}
+
+/* Fade out inactive tabs colors. */
+
+.nav-tabs .nav-link.disabled {
+    color: rgba(0, 0, 0, 0.25);
+}
+
+/* Add fancy blurring to the header. */
+
+.is-sticky .header {
+    -webkit-backdrop-filter: saturate(180%) blur(5px);
+    backdrop-filter: saturate(180%) blur(5px);
+    background-color: rgba(33, 150, 243, 0.8) !important;
+}
+
+/* Fix sticky header styling. */
+
+.header {
+    transition: background-color .3s;
+}
+
+.sidebar, .content {
+    padding-top: 30px !important;
+}
+
+/* Fix Select2 loading styling. */
+
+.form-control.select2 {
+    line-height: 1.5;
+    padding: .375rem 2px;
+}
+
+/* Fix focused buttons. */
+
+.btn-primary.focus, .btn-primary:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.15rem rgba(66, 166, 245, .5);
+}
+
+.btn-danger.focus, .btn-danger:focus, .btn-danger:not(:disabled):not(.disabled).active:focus, .btn-danger:not(:disabled):not(.disabled):active:focus, .show>.btn-danger.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.15rem rgba(255, 129, 127, .5);
+}
+
+.btn-warning.focus, .btn-warning:focus, .btn-warning:not(:disabled):not(.disabled).active:focus, .btn-warning:not(:disabled):not(.disabled):active:focus, .show>.btn-warning.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.15rem rgba(255, 207, 66, .5);
+}
+
+.btn-link.focus, .btn-link:focus, .btn-link:not(:disabled):not(.disabled).active:focus, .btn-link:not(:disabled):not(.disabled):active:focus, .show>.btn-link.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.15rem #f6f6f6;
+}
+
+.btn-outline-danger.focus, .btn-outline-danger:focus, .btn-outline-danger:not(:disabled):not(.disabled).active:focus, .btn-outline-danger:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-danger.dropdown-toggle:focus {
+    color: #FFF;
+    background-color: #ff6b68;
+    border-color: #ff6b68;
+}
+
+.btn-outline-primary.focus, .btn-outline-primary:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .btn-outline-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.15rem rgba(33, 150, 243, .5);
+}
+
+.btn-outline-secondary.focus, .btn-outline-secondary:focus, .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-secondary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.15rem rgba(134, 142, 150, .5);
+}
+
+.btn--action:focus {
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .15), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12)!important;
+}
+
+.btn-danger:focus {
+    color: #FFF;
+    background-color: #ff4642;
+    border-color: #ff3935;
+}
+
+.page-link:focus {
+    z-index: 2;
+    color: #81878d;
+    background-color: #e6e6e6;
+    border-color: #dee2e6;
+}
+
+/* Fix Flatpickr readonly inconsistency. */
+
+.form-control.flatpickr-input[readonly] {
+    opacity: 1;
+}
+
+/* Fix menu focus feedback. */
+
+.navigation li a:focus {
+    background-color: rgba(0, 0, 0, .04);
+}
+
+.navigation li:not(.navigation__active):not(.navigation__sub--active) a:focus {
+    color: #5c6165;
+}
+
+/* Fix header logo focus feedback. */
+
+.header__logo a:focus {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Fix list item focus feedback. */
+
+.listview--hover .listview__item:focus-within {
+    background-color: #f9f9f9;
+}
+
+.listview__content a:focus {
+    color: #32363a;
+}
+
+.listview__content .listview__heading a:focus {
+    color: #111;
+}
+
+/* Fix tab focus feedback. */
+
+.nav-tabs .nav-link {
+    transition: all .3s;
+}
+
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.02) !important;
+}
+
+/* Permission group icon size. */
+
+.permission-group .zmdi {
+    font-size: 1.5rem;
+    vertical-align: bottom;
+    margin-right: 0.3rem;
+}
+
+/* Improve responsiveness on reports pages. */
+
+.report-row .select2 {
+    min-width: 150px;
+}
+
+/* Style radios in menus. */
+
+.dropdown-menu--sort>.radio {
+    white-space: nowrap;
+    padding: .5rem 1.5rem .25rem;
+}
+
+/* Don't float text-counter error text. */
+
+.error-text-min {
+    float: none !important;
+}
+
+/* Fix footer nav-links being unstyled. */
+
+.footer__nav .nav-link a {
+    color: #8e9499;
+    transition: color .3s;
+}
+
+.footer__nav .nav-link a:hover {
+    color: #111;
+}
